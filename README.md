@@ -22,4 +22,4 @@ Given a $m$ max-cardinality.
 
   1. Erasthotenes prime sieve is applied to a max bound of $\left\lceil\dfrac{m}{2}\right\rceil$
   2. A double loop is used over $p$ and $q$ ensuring that once $pq$ is evaluated, $qp$ is later ignored.
-     Negating simpleness of the group if $p \nequiv 1 \pmod{q}$ or $q \nequiv 1 \pmod{p}$. 
+     Negating simpleness of the group if $p \not\equiv 1 \pmod{q}$ or $q \not\equiv 1 \pmod{p}$. 
