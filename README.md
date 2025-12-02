@@ -13,6 +13,10 @@ $$ q \equiv 1 \pmod{p} $$
 If the previous is true, then the count of groups could either be one or $q$. Case for which other lemmas and studies of the 
 group structure must be done to determine the count of $p-\text{Sylow}$ groups.
 
-However, if it is not true, then the only $1$ is a valid count for $p-\text{Sylow}$ subgroups of $G$. Consequently, it is a normal subgroup of $G$.
-Since by lemma $p < pq$ and $q < pq$. Following the aforementioned logical process over all combinations of $p\neq q$ with $pq$ lesser than a given bound
-will let us confirm simpleness (or the lack thereof) of groups of $pq$ order.
+However, if it is not true, then the count of $1$ is the only valid count for $p-\text{Sylow}$ subgroups of $G$. Consequently, the unique $p-\text{Sylow}$ subgroup is a normal subgroup of $G$.
+
+An equivalent process can be taken to determine the uniqueness of $q-\text{Sylow}$ subgroups. And since $p < pq$ and $q < pq$. Following the aforementioned logical process over all combinations of $p\neq q$ with $pq$ lesser than a given bound will let us confirm simpleness (or the lack thereof) of groups of $pq$ order.
+
+## Implementation
+
+
