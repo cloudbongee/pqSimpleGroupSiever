@@ -18,5 +18,8 @@ However, if it is not true, then the count of $1$ is the only valid count for $p
 An equivalent process can be taken to determine the uniqueness of $q-\text{Sylow}$ subgroups. And since $p < pq$ and $q < pq$. Following the aforementioned logical process over all combinations of $p\neq q$ with $pq$ lesser than a given bound will let us confirm simpleness (or the lack thereof) of groups of $pq$ order.
 
 ## Implementation
+Given a $m$ max-cardinality.
 
-
+  1. Erasthotenes prime sieve is applied to a max bound of $\left\lceil\dfrac{m}{2}\right\rceil$
+  2. A double loop is used over $p$ and $q$ ensuring that once $pq$ is evaluated, $qp$ is later ignored.
+     Negating simpleness of the group if $p \nequiv 1 \pmod{q}$ or $q \nequiv 1 \pmod{p}$. 
