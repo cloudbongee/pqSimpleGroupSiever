@@ -1,6 +1,8 @@
 # groupSiever
 
-## Simple groups of order $pq$
+GroupSiever was made to aid myself with finding and counting for me the non-simple groups $2 < |G| < 168$. 
+
+## Groups of order $pq$
 
 ### Theory
 Given a group $\vert G\vert = p^km$, due to the consequence of Sylow's theorem, $n_p:=[G:N(p)]$ follows 
