@@ -1,4 +1,3 @@
-
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
@@ -15,8 +14,8 @@
 
 struct intList
 {
-	int len;
-	int *list;
+        int len;
+        int *list;
 };
 
 struct intList *primeSieve(int n);
