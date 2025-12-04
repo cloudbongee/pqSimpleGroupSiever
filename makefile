@@ -21,6 +21,9 @@ pkSieve: pkSieve.c pkSieve.h eratosthenes.o
 nSieve: nSieve.c nSieve.h extendedEratosthenes.o eratosthenes.o
 	$(CC) $(FLAGS) eratosthenes.o extendedEratosthenes.o $@.c -o nSieve -lm
 
+indexSieve: indexSieve.c indexSieve.h
+	$(CC) $(FLAGS) indexSieve.c -o indexSieve -lm
+
 eratosthenes.o: eratosthenes.c eratosthenes.h
 	$(CC) $(FLAGS) -c eratosthenes.c
 

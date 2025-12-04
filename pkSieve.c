@@ -4,7 +4,7 @@
 
 int pkSieve(int n)
 {
-	int m = floor(sqrt(n));
+	int m = ceil(sqrt(n));
 	struct intList *primes = primeSieve(m);
 
 	int count = 0;
