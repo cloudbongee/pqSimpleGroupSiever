@@ -90,10 +90,7 @@ See [Cayley's theorem] below.
 As any good chef, I leave my recipes open to the world.
 
 ```
-make pqSieve
-make pkSieve
-make nSieve
-make indexSieve
+make all
 ```
 Will throw an executable assuming you have `gcc`, `stdio.h`, `stdlib.h`, `math.h`, and can run makefiles.
 
