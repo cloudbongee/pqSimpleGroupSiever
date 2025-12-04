@@ -86,7 +86,18 @@ See [Cayley's theorem] below.
 ## Lemmas
 ### Cayley's theorem
 
-## Flags
+## Make
+As any good chef, I leave my recipes open to the world.
+
+```
+make pqSieve
+make pkSieve
+make nSieve
+make indexSieve
+```
+Will throw an executable assuming you have `gcc`, `stdio.h`, `stdlib.h`, `math.h`, and can run makefiles.
+
+### Flags
 In the makefile, the variables
 
 ```
