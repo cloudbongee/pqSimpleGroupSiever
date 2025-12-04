@@ -18,8 +18,17 @@ pqSieve: pqSieve.c pqSieve.h eratosthenes.o
 pkSieve: pkSieve.c pkSieve.h eratosthenes.o
 	$(CC) $(FLAGS) eratosthenes.o $@.c -o pkSieve -lm
 
+nSieve: nSieve.c nSieve.h extendedEratosthenes.o eratosthenes.o
+	$(CC) $(FLAGS) eratosthenes.o extendedEratosthenes.o $@.c -o nSieve -lm
+
 eratosthenes.o: eratosthenes.c eratosthenes.h
-	$(CC) $(FLAGS) -c $(*F).c
+	$(CC) $(FLAGS) -c eratosthenes.c
+
+extendedEratosthenes.o: extendedEratosthenes.c eratosthenes.h
+	$(CC) $(FLAGS) -c extendedEratosthenes.c
+	
+
+
 
 .PHONY clean:
 	rm -f $(OBFILES)

@@ -10,8 +10,19 @@ struct intList
         int *list;
 };
 
+
+struct primeComplement
+{
+	struct intList *primes;
+	struct intList *nonPrimes;
+};
+
 struct intList *primeSieve(int n);
 
+struct primeComplement *extendedPrimeSieve(int n);
+
 void freeIntList(struct intList *l);
+
+void freePrimeComplements(struct primeComplement *c);
 
 #endif
