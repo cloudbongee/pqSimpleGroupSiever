@@ -178,8 +178,8 @@ $|G| \text{ is not prime }, p \mid n$, $|G|$ is not simple if $\forall x \in \ma
 
 There are two cases for $|G|$
 
-  1. $|G| = p^k$, then the theorem above applies.
-  2. $|G| = p^km$, then $\text{Syl}_p(G) < G$ (strictly), $[G:N(p)] \mid m \land [G:N(p)] \equiv 1 \pmod{p}$
+  1. $|G| = p^k$, then the theorem above for the center of a $p^k$ order group applies.
+  2. $|G| = p^km$, then $\text{Syl}_p(G) < G$ (strictly), $[G:N(p)] \mid m \land [G:N(p)] \equiv 1 \pmod{p}$, if one is the only number to meet these requirements, then the count for a Sylow group is unique and therefore the $p-\text{Sylow}$ group is normal
 
 ## Non simplicity of groups $2n, n \in \mathbb{Z}^{\text{odd}}, n > 1$
 
