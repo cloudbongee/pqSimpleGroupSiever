@@ -98,7 +98,7 @@ See [Cayley's theorem] below.
 
 ## The rest of the entries
 
-If $G$ is finite, and $H<G$ has $\vert G \vert \nmid  \vert G : H \vert $, then $\exists K \leq H : \\{e\\} \neq K \triangleleft G$.
+If $G$ is finite, and $H<G$ has $\vert G \vert \nmid  |G : H|! $, then $\exists K \leq H : \\{e\\} \neq K \triangleleft G$.
 
 Check [remaining.c](remaining.c) to see how the remaining groups were extracted from the concatenation of the results of `pqSieve.c`, `nSieve.c`, and `pkSieve.c`.
 
