@@ -151,6 +151,25 @@ See [pkSieve.c](pkSieve.c) with usage
 pkSieve [maxGroupSize]
 ```
 
+Using `pkSieve 167` results in
+
+```
+> 4
+> 8
+> 16
+> 32
+> 64
+> 128
+> 9
+> 27
+> 81
+> 25
+> 125
+> 49
+> 121
+With a count of 13 non-simple groups
+```
+
 ## Groups under general sylow non-simplicity test
 
 $|G| \text{ is not prime }, p \mid n$, $|G|$ is not simple if $\forall x \in \mathbb{N}: x \mid |G| \land x \equiv 1 \pmod{p} \implies x = 1$ 
