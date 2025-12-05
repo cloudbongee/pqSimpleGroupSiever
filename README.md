@@ -343,7 +343,7 @@ Where
 
 $$ \alpha_x\colon z \mapsto xz $$
 
-is an isomorphism $G \cong \text{Sym}(G)$. 
+is an isomorphism $G \cong \text{Sym}(G)$, where due to Cauchy's theorem we confirm an element of order $2$ we call $g$. Then $\alpha_g$ is representable as $n$ transpositions. Therefore the even permutations under the image of $G$ is normal, index 2.
 
 ## Index theorem using Sylow subgroups
 
@@ -472,6 +472,13 @@ Which leaves 56,72,105,112,120,132,144.
 
 $$ [G:H] = n \implies A_n $$
 
+### Proof
+
+ $H\leq G : |G:H| = n$. Let $G$ be simple and $S_n$ represent the permutation of the $n$ left cosets.
+ There is a homomorphism $\phi\colon G\to S_n$, but the kernel is normal, and due to simpleness it must then be trivial, making $\phi$ an isomorphism to a subgroup of $S_n$. $S_n$ has half even and half odd permutations, Due to simpleness, this subgroup can't be odd or else the even permutations would be a normal subgroup. Hence the isomorphism left is $A_n$.
+
+### Elimination of the rest of the groups
+
 Cases 56, 105, and 132 can be negated by looking at their factorizations
 
   - $56 = 7 \cdot 8$
@@ -497,7 +504,10 @@ All of those are far greater than the original count of elements of the groups. 
 
 This leaves only 72, 112, 120, and 144 now.
 
-$$
+
+If $|G|=72=2^3 \cdot 3^2$, $1\equiv n_3 \pmod{3} \land n_3 \mid 8$. Only $4,1$ are valid, and accepting $4$ would imply a homomorphic $G$ to $S_4$, where if trivial, the isomorphism formed is invalid due to the distinct cardinalities, and if the homomorphism were trivial (or the kernel is total), then the Sylow groups would also be normal, but accepting an index $4$ implies they should not be normal. Hence there is a contradiction. 
+
+If $|G| = 2^4 \cdot 7= 112$, by embedding theorem we have that there is an isomorphism to a subgroup of $A_7$, however $112\nmid 7!/2$, therefore it can't be equivalent to a subgroup of $A_7$
 
 ## Make
 As any good chef, I leave my recipes open to the world.
@@ -505,7 +515,7 @@ As any good chef, I leave my recipes open to the world.
 ```
 make all
 ```
-Will throw an executable assuming you have `gcc`, `stdio.h`, `stdlib.h`, `math.h`, and can run makefiles.
+Will throw many executables assuming you have `gcc`, `stdio.h`, `stdlib.h`, `math.h`, and can run makefiles.
 
 ### Flags
 In the makefile, the variables
