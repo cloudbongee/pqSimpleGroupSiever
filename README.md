@@ -1,6 +1,6 @@
 # groupSiever
 
-GroupSiever was made to aid myself with finding and counting for me the non-simple groups of non prime $2 \leq |G| < 168$.
+GroupSiever was made to aid myself with finding and counting for me the non-simple groups of non prime $2 \leq |G| < 60  < 168$, $61 \leq |G| < 168$.
 
 Made with a smile.
 
@@ -181,15 +181,169 @@ There are two cases for $|G|$
   1. $|G| = p^k$, then the theorem above for the center of a $p^k$ order group applies.
   2. $|G| = p^km$, then $\text{Syl}_p(G) < G$ (strictly), $[G:N(p)] \mid m \land [G:N(p)] \equiv 1 \pmod{p}$, if one is the only number to meet these requirements, then the count for a Sylow group is unique and therefore the $p-\text{Sylow}$ group is normal
 
+### Implementation 
+
+See [nSieve.c](nSieve.c), where 
+  1. Two separate lists of primes and non primes are generated from a sieve.
+  2. Pick a group size.
+  3. For each of the primes, if a prime divides a group size, but there is no divisor of $|G|$ that is
+     also equivalent to 1 modulo $p$, then the groups of specified group size are non-simple.
+
+After running `nSieve 167`
+
+```
+Printing non-simple groups
+> 4
+> 6
+> 8
+> 9
+> 10
+> 14
+> 15
+> 15
+> 16
+> 18
+> 20
+> 21
+> 22
+> 25
+> 26
+> 27
+> 28
+> 32
+> 33
+> 33
+> 34
+> 35
+> 35
+> 38
+> 39
+> 40
+> 42
+> 44
+> 45
+> 45
+> 46
+> 49
+> 50
+> 51
+> 51
+> 52
+> 54
+> 55
+> 57
+> 58
+> 62
+> 63
+> 64
+> 65
+> 65
+> 66
+> 68
+> 69
+> 69
+> 70
+> 70
+> 74
+> 75
+> 76
+> 77
+> 77
+> 78
+> 81
+> 82
+> 84
+> 85
+> 85
+> 86
+> 87
+> 87
+> 88
+> 91
+> 91
+> 92
+> 93
+> 94
+> 95
+> 95
+> 98
+> 99
+> 99
+> 100
+> 102
+> 104
+> 106
+> 110
+> 111
+> 114
+> 115
+> 115
+> 116
+> 117
+> 118
+> 119
+> 119
+> 121
+> 122
+> 123
+> 123
+> 124
+> 125
+> 126
+> 128
+> 129
+> 130
+> 133
+> 133
+> 134
+> 135
+> 135
+> 136
+> 138
+> 140
+> 140
+> 141
+> 141
+> 142
+> 143
+> 143
+> 145
+> 145
+> 146
+> 147
+> 148
+> 152
+> 153
+> 153
+> 154
+> 155
+> 156
+> 158
+> 159
+> 159
+> 161
+> 161
+> 162
+> 164
+> 165
+> 166
+```
+
 ## Non simplicity of groups $2n, n \in \mathbb{Z}^{\text{odd}}, n > 1$
 
 $$ \vert G \vert = 2n \land n \in \mathbb{Z}^{\text{odd}} \land n > 1 \implies G \text{ is not simple}$$
 
 ### Proof
-See [Cayley's theorem] below. 
 
-## Lemmas
-### Cayley's theorem
+Given a $2n$ group size for an odd $n$, a mapping 
+
+$$ \phi\colon x \mapsto \alpha_x $$
+
+Where 
+
+$$ \alpha_x\colon z \mapsto xz $$
+
+is an isomorphism $G \cong \text{Sym}(G)$. 
 
 ## Index theorem using Sylow subgroups
 
@@ -310,9 +464,13 @@ Utilizing the index theorem, through the selection of maximal $p-\text{Sylow}$ s
 160 is nonsimple with max sylow group order 32
 ```
 
-Which leaves 56,60,72,105,112,120,132,144. 
+Which leaves 56,72,105,112,120,132,144. 
 
 ## Other cases
+
+### Embedding theorem
+
+$$ [G:H] = n \implies A_n $$
 
 Cases 56, 105, and 132 can be negated by looking at their factorizations
 
@@ -337,7 +495,9 @@ Respectively, we notice that this logic leads to a count of distinct elements:
 
 All of those are far greater than the original count of elements of the groups. Therefore creating a contradiction.
 
-This leaves only 60, 72, 112, 120, and 144 now.
+This leaves only 72, 112, 120, and 144 now.
+
+$$
 
 ## Make
 As any good chef, I leave my recipes open to the world.
