@@ -312,6 +312,33 @@ Utilizing the index theorem, through the selection of maximal $p-\text{Sylow}$ s
 
 Which leaves 56,60,72,105,112,120,132,144. 
 
+## Other cases
+
+Cases 56, 105, and 132 can be negated by looking at their factorizations
+
+  - $56 = 7 \cdot 8$
+  - $105 = 3 \cdot 5 \cdot 7 $
+  - $132 = 2^2 \cdot 3 \cdot 11$
+
+Look first at the modular relationship between these numbers
+
+  - $8\equiv 1 \pmod{7}$
+  - $15 \equiv 1 \pmod{7}$
+  - $12 \equiv 1 \pmod{11}$ and $22 \equiv 1 \pmod{3}$
+
+Initiate a contradiction by assuming that not any $p-\text{Sylow}$ group is not normal due to group simpleness, therefore not unique (In the examples above, the modulos are starring the contradiction).
+
+Observe first that $|\text{Syl}_p(G)|=p$, then the intersection of two distinct $p-\text{Sylow}$ subgroups of that size has to divide $p$, obligating it to only be $1$. Therefore the amount of new elements that the union of all the $p-\text{Sylow}$ subgroups generate is $(p-1) m$ (Given that $|G| = pm$, $m$ is the only other number that follows the third Sylow theorem, and the intersection should only be trivial). On the other hand, if $|G| = p^km$, the union of two $p-\text{Sylow}$ subgroups $H,K$ must be $2p^k - |H\cap K|$. We can set a lower bound for $H\cap K$'s order using Lagrange's theorem to find the maximum strict divisor of the order of $K$ and $H$. We call it $d$, and the lower bound $L = 2p^k - d - 1$. 
+
+Respectively, we notice that this logic leads to a count of distinct elements:
+  - $(7-1)\cdot 8 + (16 - 4 - 1) + 1 = 60$ (plus one from the identity)
+  - $(7-1)\cdot 15 + 4 \cdot 21 = 174$
+  - $120 + 44 = 164$
+
+All of those are far greater than the original count of elements of the groups. Therefore creating a contradiction.
+
+This leaves only 60, 72, 112, 120, and 144 now.
+
 ## Make
 As any good chef, I leave my recipes open to the world.
 
