@@ -1,6 +1,6 @@
 # groupSiever
 
-GroupSiever was made to aid myself with finding and counting for me the non-simple groups of non prime $2 \leq |G| < 60  < 168$, $61 \leq |G| < 168$.
+GroupSiever was made to find and prove non-simplicity for some of the groups: $2 \leq |G| < 60  < 168$, $61 \leq |G| < 168$.
 
 Made with a smile.
 
