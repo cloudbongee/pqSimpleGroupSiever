@@ -470,7 +470,7 @@ Which leaves 56,72,105,112,120,132,144.
 
 ### Embedding theorem
 
-$$ [G:H] = n \implies A_n $$
+$$[G:H] = n \implies \exists K \leq A_n : G \cong K $$
 
 ### Proof
 
